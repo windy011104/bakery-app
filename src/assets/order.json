@@ -1,0 +1,33 @@
+[
+    {
+      "member_id": 1,
+      "nama": "Dewi Lestari",
+      "email": "dewi@mail.com",
+      "tipe_member": "gold"
+    },
+    {
+      "member_id": 2,
+      "nama": "Agus Saputra",
+      "email": "agus@mail.com",
+      "tipe_member": "silver"
+    },
+    {
+      "member_id": 3,
+      "nama": "Mira Yuliani",
+      "email": "mira@mail.com",
+      "tipe_member": "platinum"
+    },
+    {
+      "member_id": 4,
+      "nama": "Budi Prasetyo",
+      "email": "budi@mail.com",
+      "tipe_member": "gold"
+    },
+    {
+      "member_id": 5,
+      "nama": "Tina Anggraini",
+      "email": "tina@mail.com",
+      "tipe_member": "silver"
+    }
+  ]
+  

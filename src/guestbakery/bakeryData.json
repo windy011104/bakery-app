@@ -1,0 +1,242 @@
+[{
+  "id": 1,
+  "name": "Croissant Cokelat",
+  "description": "Pastry renyah berisi lelehan cokelat Belgia.",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGxZJdTUK6Xl0eIlIlfJTvSIr3cgBj1BZDmw&s",
+  "details": {
+    "vendor": "Yummy Bakery",
+    "releaseYear": 2015,
+    "officialWebsite": "https://yummicompanybakery.com"
+  },
+ 
+  "tags": ["Croissant", "Cokelat", "Pastry", "Favorit"]
+},
+{
+  "id": 2,
+  "name": "Roti Sobek Keju",
+  "description": "Roti lembut isi keju manis, cocok untuk sarapan.",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmee-keyLMRYpTI77a_L4G4AY0CxhjiGMXTQ&s",
+  "details": {
+    "vendor": "Yummy Bakery",
+    "releaseYear": 2016,
+    "officialWebsite": "https://yummicompanybakery.com"
+  },
+  "tags": ["Roti", "Keju", "Lembut", "Tradisional"]
+},
+{
+  "id": 3,
+  "name": "Donat Kentang",
+  "description": "Donat empuk dengan topping gula halus.",
+  "image": "https://img-global.cpcdn.com/recipes/f3d4726746ab80f2/1200x630cq70/photo.jpg",
+  "details": {
+    "vendor": "Yummy Bakery",
+    "releaseYear": 2017,
+    "officialWebsite": "https://yummicompanybakery.com"
+  },
+  "tags": ["Donat", "Kentang", "Manis", "Snack"]
+},
+{
+  "id": 4,
+  "name": "Roti Bakar Cokelat Madu",
+  "description": "Roti bakar renyah dengan olesan cokelat dan madu.",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKBgKiyVWc7lM6TLAPw2HtLgNw3XAVMPkwtQ&s",
+  "details": {
+    "vendor": "Yummy Bakery",
+    "releaseYear": 2018,
+    "officialWebsite": "https://yummicompanybakery.com"
+  },
+  "tags": ["Roti", "Cokelat", "Manis", "Hangat"]
+},
+{
+  "id": 5,
+  "name": "Lapis Legit Komplit",
+  "description": "Kue lapis berlapis aroma rempah dan mentega.",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTObFzdSiuyS5og2oEjmlld3laummYty7uAOQ&s",
+  "details": {
+    "vendor": "Yummy Bakery",
+    "releaseYear": 2019,
+    "officialWebsite": "https://yummicompanybakery.com"
+  },
+  "tags": ["Kue", "Tradisional", "Lapis", "Premium"]
+},
+{
+  "id": 6,
+  "name": "Banana Bread",
+  "description": "Kue pisang lembut dengan aroma kayu manis.",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLl-XyU_qyxoj4YYQqW8CsrhbF4pHbj-SY8Q&s",
+  "details": {
+    "vendor": "Yummy Bakery",
+    "releaseYear": 2014,
+    "officialWebsite": "https://yummicompanybakery.com"
+  },
+  "tags": ["Kue", "Pisang", "Manis", "Sehat"]
+},
+{
+  "id": 7,
+  "name": "Cheese Roll",
+  "description": "Pastry gulung dengan isian keju gurih dan lembut.",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYwGAnoBznDUUGlSXsJyB4TQVY9OcxUREljA&s",
+  "details": {
+    "vendor": "Yummy Bakery",
+    "releaseYear": 2016,
+    "officialWebsite": "https://yummicompanybakery.com"
+  },
+  "tags": ["Pastry", "Keju", "Gulung", "Modern"]
+},
+{
+  "id": 8,
+  "name": "Bolu Kukus Pandan",
+  "description": "Bolu kukus lembut rasa pandan tradisional.",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpgb456OzMF3LenHguCX3A0ArNntFZDG6s-g&s",
+  "details": {
+    "vendor": "Yummy Bakery",
+    "releaseYear": 2020,
+    "officialWebsite": "https://yummicompanybakery.com"
+  },
+  "tags": ["Bolu", "Pandan", "Lembut", "Tradisional"]
+},
+{
+  "id": 9,
+  "name": "Kue Lumpur",
+  "description": "Kue basah lembut dengan rasa kelapa dan kentang.",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRO1EoZG_Vv-M9tvfxMlbyygjkX6hCwsDzaA&s",
+  "details": {
+    "vendor": "Yummy Bakery",
+    "releaseYear": 2013,
+    "officialWebsite": "https://yummicompanybakery.com"
+  },
+  "tags": ["Kue", "Basah", "Tradisional", "Manis"]
+},
+{
+  "id": 10,
+  "name": "Kue Cubit Green Tea",
+  "description": "Kue cubit kekinian rasa matcha dan topping choco chip.",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHzItk0vRpGuzVxipSHRqetDqmEsyMGk-y0A&s",
+  "details": {
+    "vendor": "Yummy Bakery",
+    "releaseYear": 2015,
+    "officialWebsite": "https://yummicompanybakery.com"
+  },
+  "tags": ["Kue", "Modern", "Matcha", "Manis"]
+},
+{
+  "id": 11,
+  "name": "Lontong Brownies",
+  "description": "Brownies kukus berbentuk lontong, unik dan lembut.",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW3U5lkdnwryuJPEjqNgiLaIWastiqG3EXFg&s",
+  "details": {
+    "vendor": "Yummy Bakery",
+    "releaseYear": 2016,
+    "officialWebsite": "https://yummicompanybakery.com"
+  },
+  "tags": ["Brownies", "Cokelat", "Unik", "Lembut"]
+},
+{
+  "id": 12,
+  "name": "Pastel Ayam",
+  "description": "Pastry isi ayam dan sayur, cocok untuk cemilan.",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0uFIJR-V9URC3ZsXU-OG7J_9AL1mxJHC1eA&s",
+  "details": {
+    "vendor": "Yummy Bakery",
+    "releaseYear": 2017,
+    "officialWebsite": "https://yummicompanybakery.com"
+  },
+  "tags": ["Pastry", "Gorengan", "Snack", "Ayam"]
+},
+{
+  "id": 13,
+  "name": "Bolu Kukus Jagung",
+  "description": "Kue bolu kukus dengan rasa manis jagung alami.",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx1eXgslEuwPQgLPJdqilYHr_FKITDDNclPw&s",
+  "details": {
+    "vendor": "Yummy Bakery",
+    "releaseYear": 2018,
+    "officialWebsite": "https://yummicompanybakery.com"
+  },
+  "tags": ["Bolu", "Jagung", "Kukus", "Vegetarian"]
+},
+{
+  "id": 14,
+  "name": "Brownies Tahu Tempe",
+  "description": "Brownies unik berbahan dasar tahu dan tempe.",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9dQb2L4g9_-K-UIEG-uoKauwjzf3eS-5IDA&s",
+  "details": {
+    "vendor": "Yummy Bakery",
+    "releaseYear": 2019,
+    "officialWebsite": "https://yummicompanybakery.com"
+  },
+  "tags": ["Brownies", "Unik", "Vegetarian", "Fusion"]
+},
+{
+  "id": 15,
+  "name": "Nastar Komplit",
+  "description": "Kue nastar isi nanas, lengkap dengan variasi topping keju dan cokelat.",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjIFHWzojCyIVpu7W5JMmoDO3c6g_CYtATHw&s",
+  "details": {
+    "vendor": "Yummy Bakery",
+    "releaseYear": 2020,
+    "officialWebsite": "https://yummicompanybakery.com"
+  },
+  "tags": ["Kue Kering", "Nastar", "Komplit", "Lebaran"]
+},
+{
+  "id": 16,
+  "name": "Cheese Tart Pedas",
+  "description": "Cheese tart dengan sentuhan cabai untuk sensasi pedas gurih.",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBb3c1-IKFTT0CrDXZKL4z3Zp0AwGFRGo8nA&s",
+  "details": {
+    "vendor": "Yummy Bakery",
+    "releaseYear": 2021,
+    "officialWebsite": "https://yummicompanybakery.com"
+  },
+  "tags": ["Cheese", "Tart", "Pedas", "Unik"]
+},
+{
+  "id": 17,
+  "name": "Es Kue Cendol",
+  "description": "Kue basah rasa cendol dengan lapisan santan dan gula merah.",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiXgHeCrUfYChtnOq9U2zniuPsXqdKKETD4w&s",
+  "details": {
+    "vendor": "Yummy Bakery",
+    "releaseYear": 2015,
+    "officialWebsite": "https://yummicompanybakery.com"
+  },
+  "tags": ["Kue", "Cendol", "Segar", "Manis"]
+},
+{
+  "id": 18,
+  "name": "Kerupuk Roti",
+  "description": "Roti kering renyah sebagai pelengkap teh atau kopi.",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0L8nnZKOdTvK6Zv28ZwXaGjyQ8dYKZyuWTQ&s",
+  "details": {
+    "vendor": "Yummy Bakery",
+    "releaseYear": 2012,
+    "officialWebsite": "https://yummicompanybakery.com"
+  },
+  "tags": ["Snack", "Roti Kering", "Pelengkap", "Gurih"]
+},
+{
+  "id": 19,
+  "name": "Pie Sayur",
+  "description": "Pie gurih isi sayuran dan keju, cocok untuk vegetarian.",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNHaUPTKBMvVXyndpXVsC8b69RMNradUayUw&s",
+  "details": {
+    "vendor": "Yummy Bakery",
+    "releaseYear": 2014,
+    "officialWebsite": "https://yummicompanybakery.com"
+  },
+  "tags": ["Pie", "Vegetarian", "Gurih", "Sehat"]
+},
+{
+  "id": 20,
+  "name": "Roti Tawar Liwet",
+  "description": "Roti tawar spesial untuk pendamping nasi liwet mini.",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKxGsoQVOqVUqSGW2Sj9BsYi3EFIE5lq_C5g&s",
+  "details": {
+    "vendor": "Yummy Bakery",
+    "releaseYear": 2016,
+    "officialWebsite": "https://yummicompanybakery.com"
+  },
+  "tags": ["Roti", "Tawar", "Spesial", "Tradisional"]
+}
+]

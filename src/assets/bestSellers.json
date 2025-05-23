@@ -1,0 +1,63 @@
+[
+    {
+      "name": "Donat Kentang",
+      "price": "Rp 85.000",
+      "image": "https://img-global.cpcdn.com/recipes/f3d4726746ab80f2/1200x630cq70/photo.jpg",
+      "tag": "Best Seller"
+    },
+    {
+      "name": "Macaron",
+      "price": "Rp 95.000",
+      "image": "https://lovefoodfeed.com/wp-content/uploads/2023/01/Macarons-px-1200-01-1.jpg",
+      "tag": "New"
+    },
+    {
+      "name": "Tiramisu Classic",
+      "price": "Rp 90.000",
+      "image": "https://www.frisianflag.com/storage/app/media/uploaded-files/itra.jpg",
+      "tag": "Favorite"
+    },
+    {
+      "name": "Strawberry Cheesecake",
+      "price": "Rp 110.000",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7plOLBRegNcv9Fj7wMgRMY9xHnwUCn4NnZQ&s",
+      "tag": "Best Seller"
+    },
+    {
+      "name": "Chocolate Lava Cake",
+      "price": "Rp 100.000",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHsOeBpPMRilhMzOClu0IQOl5EvmRtMvK8NA&s",
+      "tag": "Favorite"
+    },
+    {
+      "name": "Choco Banana Roll",
+      "price": "Rp 80.000",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4QyNeouNbKbFj14REXcEcUZHlVryl4IWcfw&s",
+      "tag": "New"
+    },
+    {
+      "name": "Vanilla Cupcake",
+      "price": "Rp 70.000",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpc0pPI7ybZKGmjqzeK3hm_n4B2oy-Heqx8A&s",
+      "tag": "Popular"
+    },
+    {
+      "name": "Matcha Mille Crepe",
+      "price": "Rp 120.000",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEydFV2xjr4RspQojhYkPo8exPryEIWa2i1Q&s",
+      "tag": "Best Seller"
+    },
+    {
+      "name": "Red Velvet Cake",
+      "price": "Rp 115.000",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgwWQ_3RXQmJ9fsmICXVtvz5MclXREBriVSQ&s",
+      "tag": "Favorite"
+    },
+    {
+      "name": "Blueberry Tart",
+      "price": "Rp 90.000",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ7XwxueDpgX9n8pC9EybV0aUDs6aCze3CEA&s",
+      "tag": "Seasonal"
+    }
+  ]
+  

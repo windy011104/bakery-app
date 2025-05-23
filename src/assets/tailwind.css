@@ -1,0 +1,31 @@
+/* Custom Global CSS (imported separately if needed) */
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./fonts/Poppins-Regular.ttf');
+  }
+  
+@font-face {
+    font-family: 'Poppins-ExtraBold';
+    src: url('./fonts/Poppins-ExtraBold.ttf');
+  }
+
+/* === Global Font and Color Variables === */
+@theme{
+  /* Font */
+  --font-poppins: "Poppins", sans-serif;
+  --font-poppins-extrabold: "Poppins-ExtraBold", sans-serif;
+
+  /* Soft & Sweet Colors for Bakery Theme */
+  --color-cream: #fff7ed;          /* Creamy White (hijau cream) */
+  --color-green: #d1fae5;          /* Soft Green */
+  --color-green-dark: #10b981;     /* Darker Green (used for highlights) */
+  --color-brown: #7c3f00;          /* Chocolate Brown (optional, for contrast) */
+  --color-sugar: #fef2f2;          /* Sugar White */
+  --color-strawberry: #f472b6;     /* Strawberry Pink (optional) */
+  --color-dough: #fde68a;          /* Dough Yellow (optional) */
+  --color-butter: #facc15;         /* Butter Yellow (optional) */
+  --color-caramel: #f59e0b;        /* Caramel Orange (optional) */
+  --color-vanila: #F6E2B3          /* Vanila cream */
+}
