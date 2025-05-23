@@ -26,7 +26,7 @@ export default function Navbar() {
           id="navbar-brand"
           className="text-brown text-xl font-poppinst"
         >
-          Yummy 
+          Yummy Bakery
         </span>
       </div>
 
