@@ -6,7 +6,7 @@ export default function PageHeader({ title, subtitle }) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="relative bg-[var(--color-cream)] py-6 px-4 text-center shadow-sm"
+      className="relative bg-[var(--color-cream)] pt-16 pb-6 px-4 text-center shadow-sm"
     >
       {/* Judul */}
       <h2 className="text-2xl md:text-3xl font-poppins-extrabold text-[var(--color-caramel)] mb-1">
@@ -16,7 +16,7 @@ export default function PageHeader({ title, subtitle }) {
       {/* Subjudul */}
       {subtitle && (
         <p className="font-poppins text-[var(--color-brown)] text-xs md:text-base max-w-xl mx-auto leading-relaxed">
-        {subtitle}
+          {subtitle}
         </p>
       )}
 

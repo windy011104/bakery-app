@@ -3,12 +3,11 @@ import PageHeader from '../components/PageHeader';
 
 export default function About() {
   return (
-    <div>
-      <PageHeader
-        title="About Yummy"
+   <div>
+       <PageHeader
+        title="About Yummi"
         subtitle="Kami selalu menjadikan kepuasan customer sebagai prioritas dan mengedepankan kualitas baik dari segi produk maupun layanan."
       />
-
       {/* Bagian Tentang Kami */}
       <div className="max-w-6xl mx-auto px-4 py-8">
         <img

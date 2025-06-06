@@ -1,41 +1,68 @@
 import React from 'react';
 import PageHeader from '../components/PageHeader';
-import products from "../assets/bestSellers.json";
+import products from '../assets/bestSellers.json';
 
 export default function Products() {
   return (
-    <div>
+    <div >
       <PageHeader
-        title="Our Products"
-        subtitle="Temukan produk terbaik kami dengan kualitas premium."
+        title="Our Premium Products"
+        subtitle="Temukan produk terbaik kami dengan kualitas premium dan harga terbaik."
       />
 
-      <div className="px-6 py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto mt-12">
+        <div className="grid gap-12 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {products.map((product, index) => (
             <div
               key={index}
-              className="group relative bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden transition-transform duration-300 transform hover:scale-105"
+              className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 flex flex-col overflow-hidden"
             >
-              {/* Gambar Produk */}
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-full h-64 object-cover group-hover:opacity-80 transition-opacity duration-300"
-              />
-
-              {/* Overlay untuk Efek Hover */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black opacity-30 group-hover:opacity-60 transition-opacity duration-300"></div>
-
-              {/* Detail Produk */}
-              <div className="relative p-4">
-                <h3 className="text-xl font-semibold text-gray-800 group-hover:text-orange-500 transition-colors duration-300 mb-2">{product.name}</h3>
-                <p className="text-lg text-gray-500 mb-4">{product.price}</p>
+              {/* Image container with a slight overlay and zoom on hover */}
+              <div className="relative overflow-hidden">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-64 object-cover transition-transform duration-500 hover:scale-110"
+                />
+                {/* Optional: Discount badge */}
+                {product.discount && (
+                  <div className="absolute top-4 left-4 bg-red-500 text-white text-xs font-bold uppercase px-3 py-1 rounded-full shadow-lg">
+                    {product.discount}% OFF
+                  </div>
+                )}
               </div>
 
-              {/* Button Buy Now */}
-              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-                <button className="bg-orange-500 text-white py-2 px-6 rounded-full text-lg font-semibold transition-all duration-300 hover:bg-orange-400">
+              {/* Product info */}
+              <div className="flex flex-col flex-1 p-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2 hover:text-orange-500 transition-colors duration-300 cursor-pointer">
+                  {product.name}
+                </h3>
+
+                {/* Optional: Star rating */}
+                {product.rating && (
+                  <div className="flex items-center mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <svg
+                        key={i}
+                        className={`w-5 h-5 ${
+                          i < product.rating ? 'text-yellow-400' : 'text-gray-300'
+                        }`}
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.962a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.39 2.462a1 1 0 00-.364 1.118l1.287 3.963c.3.92-.755 1.688-1.538 1.118l-3.39-2.462a1 1 0 00-1.176 0l-3.39 2.462c-.783.57-1.838-.197-1.538-1.118l1.287-3.963a1 1 0 00-.364-1.118L2.047 9.39c-.783-.57-.38-1.81.588-1.81h4.18a1 1 0 00.95-.69l1.286-3.962z" />
+                      </svg>
+                    ))}
+                    <span className="ml-2 text-sm text-gray-600">{product.rating}.0</span>
+                  </div>
+                )}
+
+                <p className="text-orange-600 text-xl font-extrabold mb-6">{product.price}</p>
+
+                <button
+                  className="mt-auto bg-gradient-to-r from-orange-400 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white py-3 rounded-full font-semibold shadow-lg transition-transform transform hover:scale-105"
+                  aria-label={`Order ${product.name} now`}
+                >
                   Order Now
                 </button>
               </div>
