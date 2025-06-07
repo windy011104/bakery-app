@@ -16,6 +16,8 @@ const AuthLayout = React.lazy(() => import('./layouts/AuthLayout.jsx'));
 const Register = React.lazy(() => import('./pages/auth/Register.jsx'));
 const Forgot = React.lazy(() => import('./pages/auth/Forgot.jsx'));
 const Login = React.lazy(() => import('./pages/auth/Login.jsx'));
+const ProductDetail = React.lazy(() => import("./pages/ProductDetail"))
+const TestimonialDetail = React.lazy(() => import("./components/TestimonialsDetail"))
 
 function App() {
   return (
@@ -28,7 +30,9 @@ function App() {
                 {/* Menu utama */}
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/testimonials/:id" element={<TestimonialDetail/>} />
                 <Route path="/products" element={<Products />} />
+                <Route path="/product/:id" element={<ProductDetail />} />
                 <Route path="/special-orders" element={<SpesialOrders />} />
                 <Route path="/contact" element={<Contact />} />
               </Route>

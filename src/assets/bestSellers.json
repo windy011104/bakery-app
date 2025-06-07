@@ -1,63 +1,92 @@
 [
-    {
-      "name": "Donat Kentang",
-      "price": "Rp 85.000",
-      "image": "https://img-global.cpcdn.com/recipes/f3d4726746ab80f2/1200x630cq70/photo.jpg",
-      "tag": "Best Seller"
-    },
-    {
-      "name": "Macaron",
-      "price": "Rp 95.000",
-      "image": "https://lovefoodfeed.com/wp-content/uploads/2023/01/Macarons-px-1200-01-1.jpg",
-      "tag": "New"
-    },
-    {
-      "name": "Tiramisu Classic",
-      "price": "Rp 90.000",
-      "image": "https://www.frisianflag.com/storage/app/media/uploaded-files/itra.jpg",
-      "tag": "Favorite"
-    },
-    {
-      "name": "Strawberry Cheesecake",
-      "price": "Rp 110.000",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7plOLBRegNcv9Fj7wMgRMY9xHnwUCn4NnZQ&s",
-      "tag": "Best Seller"
-    },
-    {
-      "name": "Chocolate Lava Cake",
-      "price": "Rp 100.000",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHsOeBpPMRilhMzOClu0IQOl5EvmRtMvK8NA&s",
-      "tag": "Favorite"
-    },
-    {
-      "name": "Choco Banana Roll",
-      "price": "Rp 80.000",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4QyNeouNbKbFj14REXcEcUZHlVryl4IWcfw&s",
-      "tag": "New"
-    },
-    {
-      "name": "Vanilla Cupcake",
-      "price": "Rp 70.000",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpc0pPI7ybZKGmjqzeK3hm_n4B2oy-Heqx8A&s",
-      "tag": "Popular"
-    },
-    {
-      "name": "Matcha Mille Crepe",
-      "price": "Rp 120.000",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEydFV2xjr4RspQojhYkPo8exPryEIWa2i1Q&s",
-      "tag": "Best Seller"
-    },
-    {
-      "name": "Red Velvet Cake",
-      "price": "Rp 115.000",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgwWQ_3RXQmJ9fsmICXVtvz5MclXREBriVSQ&s",
-      "tag": "Favorite"
-    },
-    {
-      "name": "Blueberry Tart",
-      "price": "Rp 90.000",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ7XwxueDpgX9n8pC9EybV0aUDs6aCze3CEA&s",
-      "tag": "Seasonal"
-    }
-  ]
-  
+  {
+    "name": "Donat Kentang",
+    "price": "Rp 85.000",
+    "image": "https://img-global.cpcdn.com/recipes/f3d4726746ab80f2/1200x630cq70/photo.jpg",
+    "tag": "Best Seller",
+    "description": "Donat lembut berbasis kentang, digoreng hingga keemasan dan ditaburi gula halus yang meleleh di mulut.",
+    "ingredients": ["Kentang tumbuk", "Tepung premium", "Telur segar", "Susu cair", "Ragi aktif"],
+    "availability": "Tersedia setiap hari"
+  },
+  {
+    "name": "Macaron",
+    "price": "Rp 95.000",
+    "image": "https://lovefoodfeed.com/wp-content/uploads/2023/01/Macarons-px-1200-01-1.jpg",
+    "tag": "New",
+    "description": "Manis, renyah di luar, dan lembut di dalam. Macaron hadir dalam berbagai rasa dan warna pastel yang menggoda.",
+    "ingredients": ["Putih telur organik", "Gula icing", "Tepung almond", "Filling stroberi, coklat, matcha"],
+    "availability": "Akhir pekan saja"
+  },
+  {
+    "name": "Tiramisu Classic",
+    "price": "Rp 90.000",
+    "image": "https://www.frisianflag.com/storage/app/media/uploaded-files/itra.jpg",
+    "tag": "Favorite",
+    "description": "Lapisan ladyfinger yang direndam kopi espresso Italia, berpadu dengan mascarpone lembut dan taburan coklat bubuk.",
+    "ingredients": ["Ladyfinger", "Espresso", "Keju mascarpone", "Telur", "Kakao"],
+    "availability": "Tersedia setiap hari"
+  },
+  {
+    "name": "Strawberry Cheesecake",
+    "price": "Rp 110.000",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7plOLBRegNcv9Fj7wMgRMY9xHnwUCn4NnZQ&s",
+    "tag": "Best Seller",
+    "description": "Keju krim yang kaya menyatu dengan manis asam stroberi segar di atas dasar biskuit renyah.",
+    "ingredients": ["Cream cheese", "Stroberi segar", "Biskuit digestive", "Susu kental", "Butter"],
+    "availability": "Tersedia musim buah"
+  },
+  {
+    "name": "Chocolate Lava Cake",
+    "price": "Rp 100.000",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHsOeBpPMRilhMzOClu0IQOl5EvmRtMvK8NA&s",
+    "tag": "Favorite",
+    "description": "Kue coklat pekat dengan lelehan ganache di bagian tengah yang lumer sempurna.",
+    "ingredients": ["Dark chocolate 70%", "Mentega tawar", "Telur omega-3", "Tepung protein sedang"],
+    "availability": "Setiap hari"
+  },
+  {
+    "name": "Choco Banana Roll",
+    "price": "Rp 80.000",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4QyNeouNbKbFj14REXcEcUZHlVryl4IWcfw&s",
+    "tag": "New",
+    "description": "Bolu gulung lembut dengan isi pisang manis dan saus coklat legit.",
+    "ingredients": ["Pisang raja", "Kakao bubuk", "Gula palem", "Telur organik", "Tepung lembut"],
+    "availability": "Setiap Jumat dan Sabtu"
+  },
+  {
+    "name": "Vanilla Cupcake",
+    "price": "Rp 70.000",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpc0pPI7ybZKGmjqzeK3hm_n4B2oy-Heqx8A&s",
+    "tag": "Popular",
+    "description": "Cupcake lembut dengan rasa vanila asli dan topping buttercream swirl warna pastel.",
+    "ingredients": ["Ekstrak vanila Madagaskar", "Tepung protein rendah", "Telur", "Susu UHT"],
+    "availability": "Setiap hari"
+  },
+  {
+    "name": "Matcha Mille Crepe",
+    "price": "Rp 120.000",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEydFV2xjr4RspQojhYkPo8exPryEIWa2i1Q&s",
+    "tag": "Best Seller",
+    "description": "30 lapis crepe tipis berpadu krim matcha Jepang yang halus dan tidak terlalu manis.",
+    "ingredients": ["Matcha Jepang", "Krim segar", "Tepung", "Telur"],
+    "availability": "Pre-order H+1"
+  },
+  {
+    "name": "Red Velvet Cake",
+    "price": "Rp 115.000",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgwWQ_3RXQmJ9fsmICXVtvz5MclXREBriVSQ&s",
+    "tag": "Favorite",
+    "description": "Kue lembut berwarna merah dengan frosting keju yang gurih dan meleleh di lidah.",
+    "ingredients": ["Kakao bubuk", "Buttermilk", "Keju krim", "Cuka putih"],
+    "availability": "Setiap hari"
+  },
+  {
+    "name": "Blueberry Tart",
+    "price": "Rp 90.000",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ7XwxueDpgX9n8pC9EybV0aUDs6aCze3CEA&s",
+    "tag": "Seasonal",
+    "description": "Tart renyah berisi custard vanilla dan blueberry segar yang meledak di mulut.",
+    "ingredients": ["Blueberry", "Vanilla custard", "Pastry butter", "Gula halus"],
+    "availability": "Musim buah (Juli–Oktober)"
+  }
+]

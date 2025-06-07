@@ -1,0 +1,29 @@
+[
+  {
+    "id": 0,
+    "name": "Georgia Grimes",
+    "comment": "Rasa kuenya luar biasa! Lembut, manisnya pas, dan tampilannya sangat cantik. Sempurna untuk ulang tahun anak saya!",
+    "image": "https://randomuser.me/api/portraits/women/44.jpg",
+    "location": "Jakarta",
+    "rating": 5,
+    "date": "2025-05-01"
+  },
+  {
+    "id": 1,
+    "name": "Michael Tan",
+    "comment": "Pelayanan cepat dan ramah. Kue spesial yang saya pesan dikemas rapi dan rasanya benar-benar menggugah selera!",
+    "image": "https://randomuser.me/api/portraits/men/32.jpg",
+    "location": "Bandung",
+    "rating": 4,
+    "date": "2025-05-03"
+  },
+  {
+    "id": 2,
+    "name": "Anisa Putri",
+    "comment": "Kue favorit keluarga! Saya selalu repeat order. Varian rasa banyak dan selalu fresh from the oven!",
+    "image": "https://randomuser.me/api/portraits/women/65.jpg",
+    "location": "Surabaya",
+    "rating": 5,
+    "date": "2025-05-05"
+  }
+]

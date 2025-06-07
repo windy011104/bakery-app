@@ -9,7 +9,7 @@ export default function PageHeader({ title, subtitle }) {
       className="relative bg-[var(--color-cream)] pt-16 pb-6 px-4 text-center shadow-sm"
     >
       {/* Judul */}
-      <h2 className="text-2xl md:text-3xl font-poppins-extrabold text-[var(--color-caramel)] mb-1">
+      <h2 className="font-extrabold text-2xl md:text-3xl text-[var(--color-caramel)] mb-1">
         {title}
       </h2>
 

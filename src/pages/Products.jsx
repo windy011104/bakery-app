@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PageHeader from '../components/PageHeader';
-import products from '../assets/bestSellers.json';
+import rawProducts from '../assets/bestSellers.json';
+import { Link } from 'react-router-dom';
 
 export default function Products() {
+   const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    // Tambahkan id berdasarkan index array
+    const productsWithId = rawProducts.map((product, index) => ({
+      ...product,
+      id: index,  // pakai index sebagai id sementara
+    }));
+    setProducts(productsWithId);
+  }, []);
+
   return (
-    <div >
+    <div>
       <PageHeader
         title="Our Premium Products"
         subtitle="Temukan produk terbaik kami dengan kualitas premium dan harga terbaik."
@@ -17,14 +29,12 @@ export default function Products() {
               key={index}
               className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 flex flex-col overflow-hidden"
             >
-              {/* Image container with a slight overlay and zoom on hover */}
               <div className="relative overflow-hidden">
                 <img
                   src={product.image}
                   alt={product.name}
                   className="w-full h-64 object-cover transition-transform duration-500 hover:scale-110"
                 />
-                {/* Optional: Discount badge */}
                 {product.discount && (
                   <div className="absolute top-4 left-4 bg-red-500 text-white text-xs font-bold uppercase px-3 py-1 rounded-full shadow-lg">
                     {product.discount}% OFF
@@ -32,13 +42,12 @@ export default function Products() {
                 )}
               </div>
 
-              {/* Product info */}
               <div className="flex flex-col flex-1 p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2 hover:text-orange-500 transition-colors duration-300 cursor-pointer">
-                  {product.name}
-                </h3>
+                <Link to={`/product/${product.id}`}>
+                  <h3 className="text-2xl font-bold">{product.name}</h3>
+                </Link>
 
-                {/* Optional: Star rating */}
+
                 {product.rating && (
                   <div className="flex items-center mb-3">
                     {[...Array(5)].map((_, i) => (
