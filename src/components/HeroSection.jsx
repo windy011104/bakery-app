@@ -1,46 +1,32 @@
 export default function HeroSection() {
   return (
     <section
-      id="hero-section" // ID untuk bagian utama hero section
-      className="relative min-h-screen flex items-center justify-center bg-gradient-to-r from-pink-100 via-yellow-50 to-pink-200 overflow-hidden px-6"
+      id="hero-section"
+      className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-20 py-12 bg-[var(--color-cream)]"
     >
-      {/* Background image overlay */}
-      <img
-        id="background-image" // ID untuk gambar latar belakang
-        src="img/yummy.jpg"
-        alt="Redvelvet Cake"
-        className="absolute top-0 left-0 w-full h-full object-cover opacity-100"
-      />
-
-      {/* Overlay layer */}
-      <div
-        id="overlay-layer" // ID untuk lapisan overlay yang memberikan efek transparansi
-        className="absolute inset-0 bg-white/50 backdrop-blur-sm"
-      ></div>
-
-      {/* Content */}
-      <div
-        id="content" // ID untuk konten utama (judul, deskripsi, tombol)
-        className="relative z-10 max-w-3xl text-center"
-      >
-        <h1
-          id="hero-title" // ID untuk judul utama di hero section
-          className="text-4xl md:text-5xl font-poppins-extrabold text-[var(--color-caramel)] drop-shadow-sm mb-6"
-        >
-          Freshly Baked Happiness, Just for You
+      {/* Teks Kiri */}
+      <div className="w-full md:w-1/2 text-center md:text-left mt-10 md:mt-0">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-poppins-extrabold text-[var(--color-brand-green)] leading-tight mb-6">
+          Sweet Moments Begin <br className="hidden md:block" />
+          at Yummi Bakery
         </h1>
-        <p
-          id="hero-description" // ID untuk deskripsi singkat di hero section
-          className="text-x font-poppins text-gray-800 mb-8"
-        >
-          Temukan sensasi manis di setiap gigitan. Kue lembut, rasa autentik, dan aroma yang menggoda — semua dibuat dengan cinta di Yummy Bakery.
+        <p className="text-sm sm:text-base text-gray-700 mb-6 md:mb-8 max-w-xl mx-auto md:mx-0">
+          Yummi Bakery menghadirkan kue impianmu menjadi kenyataan – lembut,
+          lezat, dan dibuat penuh cinta. Nikmati kebahagiaan dalam setiap
+          potongannya!
         </p>
-        <button
-          id="explore-button" // ID untuk tombol aksi "Explore Our Story"
-          className="bg-[var(--color-green-dark)] text-white px-8 py-3 rounded-full text-sm font-semibold hover:bg-[var(--color-green)] transition-all shadow-lg"
-        >
-          Explore Our Story
+        <button className="bg-[var(--color-brand-green)] text-white px-6 py-3 rounded-full font-semibold hover:bg-[var(--color-green-dark)] transition-all">
+          Pesan Kue Impianmu Hari Ini
         </button>
+      </div>
+
+      {/* Gambar Kanan - Full, tidak dibungkus card */}
+      <div className="w-full md:w-1/2 flex justify-center md:justify-end">
+        <img
+          src="/img/yummy3.png"
+          alt="Produk Yummi Bakery"
+          className="w-[100%] max-w-[720px] object-cover rounded-3xl shadow-lg"
+        />
       </div>
     </section>
   );

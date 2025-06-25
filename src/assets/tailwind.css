@@ -1,6 +1,8 @@
 /* Custom Global CSS (imported separately if needed) */
 @import "tailwindcss";
 
+
+
 @font-face {
     font-family: 'Poppins';
     src: url('./fonts/Poppins-Regular.ttf');
@@ -11,7 +13,16 @@
     src: url('./fonts/Poppins-ExtraBold.ttf');
   }
 
+
 /* === Global Font and Color Variables === */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 @theme{
   /* Font */
   --font-poppins: "Poppins", sans-serif;
@@ -28,4 +39,32 @@
   --color-butter: #facc15;         /* Butter Yellow (optional) */
   --color-caramel: #f59e0b;        /* Caramel Orange (optional) */
   --color-vanila: #F6E2B3          /* Vanila cream */
+  --color-brand-orange: #C65B37;    /* Oranye tembaga dari logo */
+  --color-brand-green: #1C6B5E;       /* Hijau Tua */
+  --color-brand-green-light: #E1F3EE; /* Hijau Muda */
+
 }
+:root {
+  --color-caramel: #F5A623;
+  --color-green-dark: #1D6E5D;
+  --color-green: #4BB9A4;
+  --color-sugar: #FDF7F2;
+  --color-brown: #8B5E3C;
+
+}
+:root {
+  --color-caramel: #f59e0b;       /* Oranye */
+  --color-green-dark: #166534;   /* Hijau tua */
+  --color-brown: #6b3e26;        /* Cokelat */
+  --color-sugar: #fff7ed;        /* Latar lembut */
+}
+.swiper-pagination-bullet {
+  background-color: #d1d5db; /* abu muda default */
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background-color: var(--color-caramel) !important;
+}
+
+
+

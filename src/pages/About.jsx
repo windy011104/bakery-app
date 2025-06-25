@@ -9,13 +9,15 @@ export default function About() {
         subtitle="Kami selalu menjadikan kepuasan customer sebagai prioritas dan mengedepankan kualitas baik dari segi produk maupun layanan."
       />
       {/* Bagian Tentang Kami */}
-      <div className="max-w-6xl mx-auto px-4 py-8">
+      
+      <div className="max-w-6xl mx-auto px-4 py-8 ">
         <img
-          src="/img/yummy3.png"
+          src="/img/spesial2.webp"
           alt="Tentang Kami"
-          className="rounded-xl w-full mb-6"
+          className="rounded-xl w-full max-w-md mx-auto mb-6"
         />
-        <h2 className="font-poppins-extrabold text-[var(--color-caramel)] mb-4 text-center text-2xl">Tentang Kami</h2>
+        <h2 className="font-poppins-extrabold text-[var(--color-brand-green)] mb-4 text-center text-2xl">
+          Tentang Kami</h2>
         <p className="font-poppins text-center max-w-2xl mx-auto">
           Yummi Company Bakery merupakan perusahaan yang bergerak di bidang makanan dan berfokus pada bakery. Perusahaan ini sudah memiliki pengalaman selama 7 tahun dan berdiri sejak 2018. 
         </p>
@@ -24,7 +26,8 @@ export default function About() {
       {/* Misi */}
       <div className="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-10 items-center">
         <div>
-          <h3 className="font-poppins-extrabold text-[var(--color-caramel)] mb-4 text-2xl">Misi Kami</h3>
+          <h3 className="font-poppins-extrabold text-[var(--color-brand-green)] mb-4 text-2xl">
+            Misi Kami</h3>
           <p className="font-poppins mb-4">
             Produk yang menjadi best seller yakni Korean Garlic Bread, Bolen, Aneka Donat dan Varian Roti Manis dan Asin. 
             Keseluruhan produk yang kami olah terjamin fresh, karena proses produksi berlangsung setiap hari serta menggunakan bahan berkualitas dan tanpa bahan pengawet. 
@@ -41,7 +44,7 @@ export default function About() {
           className="rounded-xl w-full h-auto"
         />
         <div>
-          <h3 className="font-poppins-extrabold text-[var(--color-caramel)] mb-4 text-2xl">
+          <h3 className="font-poppins-extrabold text-[var(--color-brand-green)] mb-4 text-2xl">
             Janji Kami
           </h3>
           <p className="font-poppins mb-4">
@@ -61,7 +64,7 @@ export default function About() {
           <h3 className="font-poppins text-lg md:text-2xl font-semibold mb-4">
             Ingin Tahu Lebih Banyak Tentang Kami?
           </h3>
-          <button className="font-poppins bg-green-400 hover:bg-green-600 text-white px-6 py-2 rounded-full">
+          <button className="bg-[var(--color-brand-green)] text-white px-6 py-3 rounded-full font-semibold hover:bg-[var(--color-green-dark)] transition-all">
             Hubungi Kami
           </button>
         </div>

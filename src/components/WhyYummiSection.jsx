@@ -1,90 +1,75 @@
-import {GiFlour,GiCommercialAirplane,GiMeal,GiHerbsBundle,GiCheckMark,GiWrappedSweet,} from "react-icons/gi";
+import {
+  GiFlour,
+  GiCommercialAirplane,
+  GiMeal,
+  GiHerbsBundle,
+  GiCheckMark,
+  GiWrappedSweet,
+} from "react-icons/gi";
 
 export default function WhyYummiSection() {
   const features = [
     {
       id: 1,
-      icon: <GiFlour className="text-green-600 text-5xl mx-auto mb-4" />,
-      title: "Rasa",
-      desc:
-        "Kami memiliki komitmen untuk selalu menghadirkan produk yang dapat dinikmati oleh berbagai kalangan.",
+      icon: <GiFlour />,
+      title: "Rasa Autentik",
+      desc: "Cita rasa menggoda yang disukai semua kalangan, dari anak-anak hingga dewasa.",
     },
     {
       id: 2,
-      icon: <GiCommercialAirplane className="text-green-600 text-5xl mx-auto mb-4" />,
-      title: "Layanan Terbaik",
-      desc:
-        "Kami selalu memprioritaskan kepuasan dan kenyamanan pelanggan untuk terus berinovasi dalam segi pelayanan.",
+      icon: <GiCommercialAirplane />,
+      title: "Pelayanan Cepat",
+      desc: "Kami mengutamakan kenyamanan dan kecepatan pelayanan untuk pelanggan.",
     },
     {
       id: 3,
-      icon: <GiMeal className="text-green-600 text-5xl mx-auto mb-4" />,
-      title: "Jaminan Mutu Bahan",
-      desc:
-        "Kami berkomitmen untuk selalu menjaga mutu produk dengan menetapkan standar pemilihan bahan baku.",
+      icon: <GiMeal />,
+      title: "Bahan Berkualitas",
+      desc: "Dibuat dari bahan pilihan terbaik tanpa kompromi pada kualitas.",
     },
     {
       id: 4,
-      icon: <GiHerbsBundle className="text-green-600 text-5xl mx-auto mb-4" />,
+      icon: <GiHerbsBundle />,
       title: "Tanpa Pengawet",
-      desc:
-        "Seluruh produk dibuat tanpa menggunakan bahan pengawet dan fresh setiap harinya.",
+      desc: "Fresh setiap hari tanpa bahan kimia berbahaya atau pengawet tambahan.",
     },
     {
       id: 5,
-      icon: <GiCheckMark className="text-green-600 text-5xl mx-auto mb-4" />,
-      title: "Sertifikat Halal",
-      desc:
-        "Yummi Company bakery telah mendapatkan sertifikat halal MUI ID14110006542840623",
+      icon: <GiCheckMark />,
+      title: "Halal Terjamin",
+      desc: "Sertifikat halal MUI — aman dan nyaman dikonsumsi.",
     },
     {
       id: 6,
-      icon: <GiWrappedSweet className="text-green-600 text-5xl mx-auto mb-4" />,
-      title: "Kemasan Menarik",
-      desc:
-        "Produk kami dikemas dengan rapi dan menarik sehingga cocok untuk dijadikan hadiah maupun hantaran spesial.",
+      icon: <GiWrappedSweet />,
+      title: "Kemasan Eksklusif",
+      desc: "Dikemas rapi dan cantik, cocok untuk hadiah atau hantaran spesial.",
     },
   ];
 
   return (
     <section
-      id="why-yummi-section" // ID untuk keseluruhan section Mengapa Harus Yummi
-      className="bg-gradient-to-r from-[var(--color-sugar)] via-pink-100 to-rose-100 py-16 px-6"
+      id="why-yummi-section"
+      className="bg-gradient-to-br from-[#FFF6E5] via-[#FFEDE5] to-[#FDF3EB] py-20 px-6"
     >
-      <div id="why-yummi-wrapper" className="max-w-6xl mx-auto text-center">
-        <h2
-          id="why-yummi-title" // ID untuk judul utama section
-          className="text-3xl font-poppins-extrabold text-caramel mb-12 tracking-tight"
-        >
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-4xl font-poppins-extrabold  text-[var(--color-brand-green)] mb-14">
           Mengapa Harus Yummi?
         </h2>
 
-        <div
-          id="why-yummi-features" // ID untuk grid fitur-fitur
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10"
-        >
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {features.map((item) => (
             <div
               key={item.id}
-              id={`why-yummi-feature-${item.id}`} // ID unik untuk setiap kartu fitur
-              className="bg-white shadow-xl rounded-2xl p-6 transform hover:scale-105 hover:shadow-2xl hover:bg-pink-50 transition-all duration-300"
+              className="bg-white rounded-xl border-b-4 border-[var(--color-caramel)] shadow-md p-6 hover:shadow-xl hover:scale-[1.03] transition-all duration-300"
             >
-              <div
-                id={`feature-icon-${item.id}`} // ID untuk ikon fitur
-                className="text-pink-600 text-5xl mb-4 transform hover:rotate-12 transition-all duration-300"
-              >
+              <div className="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-full bg-gradient-to-br from-[var(--color-green-dark)] to-emerald-400 text-white text-3xl shadow-md">
                 {item.icon}
               </div>
-              <h3
-                id={`feature-title-${item.id}`} // ID untuk judul fitur
-                className="text-2xl font-poppins-extrabold text-gray-900 mb-2"
-              >
+              <h3 className="text-lg font-poppins-extrabold text-[var(--color-brown)] mb-2">
                 {item.title}
               </h3>
-              <p
-                id={`feature-desc-${item.id}`} // ID untuk deskripsi fitur
-                className="text-sm font-poppins text-gray-700 leading-relaxed"
-              >
+              <p className="text-sm text-gray-700 font-poppins leading-relaxed">
                 {item.desc}
               </p>
             </div>

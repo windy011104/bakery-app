@@ -152,7 +152,7 @@ export default function Contact() {
           <div className="flex justify-center">
             <button
               type="submit"
-              className="bg-orange-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-orange-400 transition shadow-md"
+              className="bg-[var(--color-brand-green)] text-white px-6 py-3 rounded-full font-semibold hover:bg-[var(--color-green-dark)] transition-all"
             >
               Kirim Pesan
             </button>

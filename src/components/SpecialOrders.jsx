@@ -2,32 +2,37 @@ export default function SpecialOrders() {
   return (
     <section
       id="special-orders"
-      className="grid md:grid-cols-2 items-center bg-[var(--color-cream)] py-14 px-6"
+      className="grid md:grid-cols-2 items-center gap-10 bg-[var(--color-cream)] py-20 px-6 md:px-16"
     >
-      <div id="special-orders-text" className="space-y-4">
+      {/* Text Konten */}
+      <div id="special-orders-text" className="space-y-6">
         <h3
           id="special-orders-title"
-          className="text-caramel text-4xl font-poppins-extrabold"
+          className="text-4xl font-poppins-extrabold text-[var(--color-brand-green)]"
         >
           Paket Kue Spesial
         </h3>
-        <p id="special-orders-description" className="text-sm font-poppins text-gray-700 mb-6">
-          Rayakan setiap momen berharga dengan kue istimewa yang bisa disesuaikan sesuai selera dan tema acaramu. 
+        <p
+          id="special-orders-description"
+          className="text-base font-poppins text-gray-700 leading-relaxed"
+        >
+          Rayakan setiap momen berharga dengan kue istimewa yang bisa disesuaikan sesuai selera dan tema acaramu.
           Dari ulang tahun, hantaran, hingga hampers elegan — kami hadirkan rasa manis dan tampilan yang memikat hati.
         </p>
         <button
           id="special-orders-button"
-          className="bg-green-300 text-white px-6 py-2 rounded-full font-semibold hover:bg-green-400 transition"
+          className="bg-[var(--color-green-dark)] text-white px-8 py-3 rounded-full font-semibold hover:bg-[var(--color-green)] transition-all shadow-md"
         >
           Order Now
         </button>
       </div>
 
+      {/* Gambar */}
       <img
         id="special-orders-image"
         src="/img/spesial.jpg"
         alt="Special Cake"
-        className="w-full max-h-[350px] object-cover rounded-xl mt-8 md:mt-0"
+        className="w-full h-auto max-h-[400px] object-cover rounded-2xl shadow-lg"
       />
     </section>
   );
