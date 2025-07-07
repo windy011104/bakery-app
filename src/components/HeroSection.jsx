@@ -1,4 +1,13 @@
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 export default function HeroSection() {
+  const navigate = useNavigate();
+
+  const handlePesanClick = () => {
+    navigate('/products'); // alihkan ke halaman produk
+  };
+
   return (
     <section
       id="hero-section"
@@ -15,12 +24,15 @@ export default function HeroSection() {
           lezat, dan dibuat penuh cinta. Nikmati kebahagiaan dalam setiap
           potongannya!
         </p>
-        <button className="bg-[var(--color-brand-green)] text-white px-6 py-3 rounded-full font-semibold hover:bg-[var(--color-green-dark)] transition-all">
+        <button
+          onClick={handlePesanClick}
+          className="bg-[var(--color-brand-green)] text-white px-6 py-3 rounded-full font-semibold hover:bg-[var(--color-green-dark)] transition-all"
+        >
           Pesan Kue Impianmu Hari Ini
         </button>
       </div>
 
-      {/* Gambar Kanan - Full, tidak dibungkus card */}
+      {/* Gambar Kanan */}
       <div className="w-full md:w-1/2 flex justify-center md:justify-end">
         <img
           src="/img/yummy3.png"

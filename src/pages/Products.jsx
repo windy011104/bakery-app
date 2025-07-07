@@ -75,12 +75,13 @@ export default function Products() {
                   {product.price}
                 </p>
 
-                <button
+                <Link
+                  to={`/product/${product.id}`}
                   className="bg-[var(--color-green-dark)] text-white px-8 py-3 rounded-full font-semibold hover:bg-[var(--color-green)] transition-all shadow-md"
                   aria-label={`Order ${product.name} now`}
                 >
                   Order Now
-                </button>
+                </Link>
               </div>
             </div>
           ))}

@@ -2,7 +2,7 @@ import { Mail, Phone, MapPin, Instagram, Facebook } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--color-brand-green)] text-white py-14 px-6 mt-0 border-t border-[var(--color-brand-green-light)] border border-blue-500 pb-0">
+    <footer className="bg-[var(--color-brand-green)] text-white py-14 px-6 mt-0 border-t border-[var(--color-brand-green-light)]">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-sm">
 
         {/* Logo */}
@@ -75,17 +75,32 @@ export default function Footer() {
           <h5 className="font-bold text-lg mb-2">Follow Us</h5>
           <div className="flex items-center gap-2">
             <Instagram className="w-5 h-5" />
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-brand-green-light)]">
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[var(--color-brand-green-light)]"
+            >
               Instagram
             </a>
           </div>
           <div className="flex items-center gap-2">
             <Facebook className="w-5 h-5" />
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-brand-green-light)]">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[var(--color-brand-green-light)]"
+            >
               Facebook
             </a>
           </div>
         </div>
+      </div>
+
+      {/* Copyright Centered Bawah */}
+      <div className="text-center text-xs text-white/60 mt-10">
+        &copy; {new Date().getFullYear()} Yummy Bakery. All rights reserved.
       </div>
     </footer>
   );

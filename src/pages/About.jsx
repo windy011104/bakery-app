@@ -56,19 +56,24 @@ export default function About() {
       {/* Bagian Ajak Hubungi */}
       <div className="relative">
         <img
-          src="/img/bg1.jpg"
-          alt="Latar Kontak"
+           src="/img/bg1.jpg"
+           alt="Latar Kontak"
           className="w-full object-cover h-80"
         />
-        <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/40 text-white text-center">
-          <h3 className="font-poppins text-lg md:text-2xl font-semibold mb-4">
-            Ingin Tahu Lebih Banyak Tentang Kami?
-          </h3>
-          <button className="bg-[var(--color-brand-green)] text-white px-6 py-3 rounded-full font-semibold hover:bg-[var(--color-green-dark)] transition-all">
-            Hubungi Kami
-          </button>
-        </div>
+      <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/40 text-white text-center">
+      <h3 className="font-poppins text-lg md:text-2xl font-semibold mb-4">
+        Ingin Tahu Lebih Banyak Tentang Kami?
+      </h3>
+            <a
+                href="https://wa.me/6282236466901?text=Halo%20Yummy%20Bakery%2C%20saya%20ingin%20bertanya%20lebih%20lanjut."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[var(--color-brand-green)] text-white px-6 py-3 rounded-full font-semibold hover:bg-[var(--color-green-dark)] transition-all"
+            >
+                Hubungi Kami
+            </a>
+            </div>
+          </div>
       </div>
-    </div>
   );
 }

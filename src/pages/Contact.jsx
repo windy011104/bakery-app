@@ -83,19 +83,16 @@ export default function Contact() {
 
   return (
     <div>
-      {/* Header halaman */}
       <PageHeader
         title="Kesan & Pesan"
         subtitle="Kami ingin mendengar pengalaman Anda bersama Yummy Bakery."
       />
 
-      {/* Formulir kontak */}
       <div className="bg-cream-100 py-10 px-4">
         <form
           onSubmit={handleSubmit}
           className="max-w-xl mx-auto bg-white p-6 md:p-10 rounded-2xl shadow-md space-y-5"
         >
-          {/* Input nama */}
           <input
             type="text"
             placeholder="Nama Lengkap"
@@ -105,7 +102,6 @@ export default function Contact() {
             className="w-full border border-green-200 rounded-xl bg-green-50 px-4 py-3 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-green-300 transition"
           />
 
-          {/* Input email */}
           <input
             type="email"
             placeholder="Email"
@@ -115,7 +111,6 @@ export default function Contact() {
             className="w-full border border-green-200 rounded-xl bg-green-50 px-4 py-3 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-green-300 transition"
           />
 
-          {/* Textarea untuk pesan */}
           <textarea
             placeholder="Pesan Anda"
             rows="5"
@@ -125,16 +120,14 @@ export default function Contact() {
             className="w-full border border-green-200 rounded-xl bg-green-50 px-4 py-3 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-green-300 transition"
           ></textarea>
 
-          {/* Komponen rating bintang */}
           <div>
             <p className="font-medium text-gray-700">Rating:</p>
             <div className="flex gap-2 text-yellow-400 text-2xl mt-1">
-              {/* Loop 1-5 untuk menampilkan bintang */}
               {[1, 2, 3, 4, 5].map((val) => (
                 <button
                   type="button"
                   key={val}
-                  onClick={() => handleRating(val)} // set rating sesuai yang diklik
+                  onClick={() => handleRating(val)}
                   className={`transition ${val <= formData.rating ? 'text-yellow-400' : 'text-gray-300'}`}
                 >
                   ★
@@ -143,12 +136,10 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Komponen loading, error, dan sukses */}
           {loading && <Loading text="Mengirim pesan..." />}
           {error && <ErrorMessage message={error} />}
           {success && <p className="text-green-600 text-center font-semibold">{success}</p>}
 
-          {/* Tombol kirim */}
           <div className="flex justify-center">
             <button
               type="submit"
