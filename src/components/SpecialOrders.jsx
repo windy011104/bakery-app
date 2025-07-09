@@ -31,7 +31,7 @@ export default function SpecialOrders() {
           <button
             onClick={handleOrderClick} // ✅ Tambahkan handler klik
             id="special-orders-button"
-            className="bg-[var(--color-green-dark)] text-white px-6 py-3 rounded-full font-semibold hover:bg-[var(--color-green)] transition-all shadow-md"
+            className="bg-[var(--color-green-dark)] text-white px-6 py-3 rounded-full font-poppins hover:bg-[var(--color-green)] transition-all shadow-md"
           >
             Order Now
           </button>

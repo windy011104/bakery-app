@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PageHeader from '../components/PageHeader';
 import { Link } from 'react-router-dom';
+import Loading from '../components/Loading';
 
 // Konstanta API
 const API_URL = "https://rutrfblexvvwtmngrlje.supabase.co/rest/v1/products";
@@ -48,9 +49,10 @@ export default function Products() {
       />
 
       <div className="max-w-7xl mx-auto mt-12 px-4">
-        {loading ? (
-          <p className="text-center text-[var(--color-brown)] font-semibold text-lg">Loading produk...</p>
-        ) : (
+          {loading ? (
+              <Loading />
+          ) : (
+
           <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {products.map((product, index) => (
               <div

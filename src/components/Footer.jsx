@@ -12,9 +12,6 @@ export default function Footer() {
             alt="Yummy Bakery Logo"
             className="w-36 h-auto mb-4 object-contain"
           />
-          <p className="text-xs text-white/80 mt-4">
-            &copy; {new Date().getFullYear()} Yummy Bakery. All rights reserved.
-          </p>
         </div>
 
         {/* Outlet Locations */}
@@ -81,7 +78,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="hover:text-[var(--color-brand-green-light)]"
             >
-              Instagram
+              yummicompany_bakery
             </a>
           </div>
           <div className="flex items-center gap-2">
@@ -92,7 +89,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="hover:text-[var(--color-brand-green-light)]"
             >
-              Facebook
+              yummicompany_bakery
             </a>
           </div>
         </div>
