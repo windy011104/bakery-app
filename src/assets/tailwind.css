@@ -49,7 +49,7 @@
   --color-green-dark: #1D6E5D;
   --color-green: #4BB9A4;
   --color-sugar: #FDF7F2;
-  --color-brown: #8B5E3C;
+  --color-browns: #8B5E3C;
 
 }
 :root {
@@ -65,6 +65,23 @@
 .swiper-pagination-bullet-active {
   background-color: var(--color-caramel) !important;
 }
+/* Sembunyikan scrollbar di semua browser */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+.swiper-pagination-bullet {
+  background-color: white !important;
+  opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
 
 
 

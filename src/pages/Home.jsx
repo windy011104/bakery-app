@@ -3,13 +3,14 @@ import BestSellers from "../components/BestSellers";
 import WhyYummiSection from "../components/WhyYummiSection";
 import Testimonials from "../components/Testimonials";
 import SpesialOrders from "../components/SpecialOrders";
-import PageHeader from "../components/PageHeader"; // pastikan path sesuai
+import PromoBanner from "../components/PromoBanner"; // pastikan path sesuai
 
 
 export default function Home() {
   return (
     <div>
       <HeroSection />
+      <PromoBanner />
       <BestSellers />
       <SpesialOrders/>
       <WhyYummiSection />

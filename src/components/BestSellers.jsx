@@ -1,10 +1,22 @@
-import products from "../assets/bestSellers.json";
+import { useRef, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useRef } from "react";
-import { Link } from "react-router-dom"; // ✅ Tambahkan ini
+import { Link } from "react-router-dom";
+
+// Supabase API constants
+const API_URL = "https://rutrfblexvvwtmngrlje.supabase.co/rest/v1/products";
+const API_KEY =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ1dHJmYmxleHZ2d3RtbmdybGplIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk5NzYyOTgsImV4cCI6MjA2NTU1MjI5OH0.50y2fw1jUPew_YM7G-WJ8Bw14Xrg8SBISXpEtXcFxGA";
+
+const headers = {
+  apikey: API_KEY,
+  Authorization: `Bearer ${API_KEY}`,
+  "Content-Type": "application/json",
+};
 
 export default function BestSellers() {
   const scrollRef = useRef(null);
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const scroll = (dir) => {
     if (scrollRef.current) {
@@ -16,12 +28,40 @@ export default function BestSellers() {
     }
   };
 
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const res = await fetch(`${API_URL}?select=*`, { headers });
+        const data = await res.json();
+        setProducts(data);
+      } catch (err) {
+        console.error("Failed to fetch products:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchProducts();
+  }, []);
+
+  const getBadgeColorByTag = (tag) => {
+  switch (tag?.toLowerCase()) {
+    case "favorit":
+      return "bg-[var(--color-green-dark)]"; // Hijau tua
+    case "new":
+      return "bg-[var(--color-brown)]";      // Cokelat
+    case "best seller":
+      return "bg-[var(--color-caramel)]";    // Oranye
+    default:
+      return "bg-[var(--color-browns)]";                  // Default abu-abu jika tag tidak dikenali
+  }
+};
+
+
   return (
     <section
       id="produk-terlaris"
       className="relative bg-[var(--color-sugar)] py-14 px-4 sm:px-6"
     >
-      {/* Judul dan Deskripsi */}
       <div className="text-center mb-10">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-poppins-extrabold text-[var(--color-brand-green)] mb-2">
           Best Seller Delights
@@ -31,7 +71,6 @@ export default function BestSellers() {
         </p>
       </div>
 
-      {/* Tombol Navigasi */}
       <div className="hidden md:block">
         <button
           onClick={() => scroll("left")}
@@ -47,49 +86,58 @@ export default function BestSellers() {
         </button>
       </div>
 
-      {/* Kontainer Scrollable */}
       <div
         ref={scrollRef}
-        className="max-w-screen-xl mx-auto overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide px-1 sm:px-2"
+        className="max-w-screen-xl mx-auto overflow-x-auto scroll-smooth snap-x snap-mandatory px-1 sm:px-2 no-scrollbar"
       >
         <div className="flex gap-4 sm:gap-6 w-max pb-2">
-          {products.map((product, index) => (
-            <div
-              key={index}
-              className="snap-start w-60 sm:w-64 md:w-72 flex-shrink-0 bg-white rounded-2xl shadow-lg hover:shadow-xl transition duration-300 relative"
-            >
-              {/* Badge */}
-              {product.tag && (
-                <span className="absolute top-3 left-3 bg-[var(--color-caramel)] text-white text-xs font-semibold px-3 py-1 rounded-full shadow">
-                  {product.tag}
-                </span>
-              )}
+          {loading ? (
+            <p className="text-center w-full">Loading products...</p>
+          ) : products.length === 0 ? (
+            <p className="text-center w-full">No products found.</p>
+          ) : (
+            products.map((product, index) => (
+              <div
+                key={product.id || index}
+                className="snap-start w-60 sm:w-64 md:w-72 flex-shrink-0 bg-white rounded-2xl shadow-lg hover:shadow-xl transition duration-300 relative"
+              >
+                {/* Badge */}
+                {product.tag && (
+                  <span
+                    className={`absolute top-3 left-3 ${getBadgeColorByTag(
+                      product.tag
+                    )} text-white text-xs font-semibold px-3 py-1 rounded-full shadow`}
+                  >
+                    {product.tag}
+                  </span>
+                )}
 
-              {/* Gambar */}
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-full h-44 sm:h-48 object-cover rounded-t-2xl"
-              />
+                {/* Gambar */}
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-44 sm:h-48 object-cover rounded-t-2xl"
+                />
 
-              {/* Info Produk */}
-              <div className="p-4 text-center">
-                <h3 className="text-base sm:text-lg font-poppins-extrabold text-[var(--color-brown)] mb-1">
-                  {product.name}
-                </h3>
-                <p className="text-[var(--color-caramel)] font-semibold text-sm sm:text-base mb-3">
-                  {product.price}
-                </p>
-                <Link
-                  to={`/product/${index}`} // ✅ Pergi ke halaman detail dengan ID berbasis index
-                  className="bg-[var(--color-green-dark)] text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-[var(--color-green)] transition"
-                  aria-label={`Order ${product.name} now`}
-                >
-                  Order Now
-                </Link>
+                {/* Info Produk */}
+                <div className="p-4 text-center">
+                  <h3 className="text-base sm:text-lg font-poppins-extrabold text-[var(--color-brown)] mb-1">
+                    {product.name}
+                  </h3>
+                  <p className="text-[var(--color-caramel)] font-semibold text-sm sm:text-base mb-3">
+                    Rp {Number(product.price).toLocaleString("id-ID")}
+                  </p>
+                  <Link
+                    to={`/product/${product.id || index}`}
+                    className="bg-[var(--color-green-dark)] text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-[var(--color-green)] transition"
+                    aria-label={`Order ${product.name} now`}
+                  >
+                    Order Now
+                  </Link>
+                </div>
               </div>
-            </div>
-          ))}
+            ))
+          )}
         </div>
       </div>
     </section>

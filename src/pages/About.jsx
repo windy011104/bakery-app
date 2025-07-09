@@ -56,7 +56,7 @@ export default function About() {
       {/* Bagian Ajak Hubungi */}
       <div className="relative">
         <img
-           src="/img/bg1.jpg"
+           src="/img/bg4.jpg"
            alt="Latar Kontak"
           className="w-full object-cover h-80"
         />

@@ -1,42 +1,64 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import rawProducts from '../assets/bestSellers.json';
 import PageHeader from '../components/PageHeader';
 import { FiShoppingCart } from 'react-icons/fi';
 import { FaUniversity } from 'react-icons/fa';
 
+// API Supabase
+const API_URL = 'https://rutrfblexvvwtmngrlje.supabase.co/rest/v1/products';
+const API_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ1dHJmYmxleHZ2d3RtbmdybGplIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk5NzYyOTgsImV4cCI6MjA2NTU1MjI5OH0.50y2fw1jUPew_YM7G-WJ8Bw14Xrg8SBISXpEtXcFxGA';
+
+const headers = {
+  apikey: API_KEY,
+  Authorization: `Bearer ${API_KEY}`,
+  'Content-Type': 'application/json',
+};
+
 export default function ProductDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [quantity, setQuantity] = useState(1);
+  const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  const productsWithId = rawProducts.map((product, index) => ({
-    ...product,
-    id: index.toString(),
-  }));
+  useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const res = await fetch(`${API_URL}?id=eq.${id}&select=*`, {
+          method: 'GET',
+          headers,
+        });
+        const data = await res.json();
+        setProduct(data[0]); // hanya satu produk
+      } catch (err) {
+        console.error('Gagal mengambil data produk:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchProduct();
+  }, [id]);
 
-  const product = productsWithId.find((p) => p.id === id);
+  if (loading) {
+    return <p className="text-center text-[var(--color-brown)] mt-12">Memuat detail produk...</p>;
+  }
 
   if (!product) {
     return (
       <p className="text-center mt-20 text-red-600 text-lg font-semibold">
-        Produk tidak ditemukan
+        Produk tidak ditemukan.
       </p>
     );
   }
 
   return (
-    <div className="">
-      {/* Page Header */}
+    <div>
       <PageHeader
         title="Detail Produk"
         subtitle="Lihat informasi lengkap produk sebelum melakukan pemesanan."
       />
 
-      {/* Isi Detail Produk */}
       <div className="max-w-4xl mx-auto px-4 pb-10 mt-8">
         <div className="bg-white rounded-3xl shadow-xl grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Gambar Produk */}
           <div className="rounded-xl overflow-hidden shadow-md">
             <img
               src={product.image}
@@ -45,7 +67,6 @@ export default function ProductDetail() {
             />
           </div>
 
-          {/* Detail Produk */}
           <div className="p-5 flex flex-col justify-between text-[var(--color-brown)]">
             <div>
               <h1 className="text-2xl font-bold text-[var(--color-green-dark)] mb-2">
@@ -58,13 +79,14 @@ export default function ProductDetail() {
                 </span>
               )}
 
-              {/* Rating */}
               {product.rating && (
                 <div className="flex items-center mt-3 gap-1">
                   {[...Array(5)].map((_, i) => (
                     <svg
                       key={i}
-                      className={`w-4 h-4 ${i < product.rating ? 'text-yellow-400' : 'text-gray-300'}`}
+                      className={`w-4 h-4 ${
+                        i < product.rating ? 'text-yellow-400' : 'text-gray-300'
+                      }`}
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -76,14 +98,13 @@ export default function ProductDetail() {
               )}
 
               <p className="mt-4 text-xl font-bold text-[var(--color-caramel)]">
-                {product.price}
+                Rp {Number(product.price).toLocaleString('id-ID')}
               </p>
 
               <p className="mt-3 text-gray-700 text-sm leading-relaxed">
                 {product.description}
               </p>
 
-              {/* Bahan-bahan */}
               {product.ingredients && (
                 <div className="mt-4">
                   <h3 className="text-sm font-semibold text-gray-800 mb-1">Bahan-bahan:</h3>
@@ -95,14 +116,12 @@ export default function ProductDetail() {
                 </div>
               )}
 
-              {/* Ketersediaan */}
               {product.availability && (
                 <p className="mt-3 italic text-sm text-gray-500">
                   <strong>Ketersediaan:</strong> {product.availability}
                 </p>
               )}
 
-              {/* Metode Pembayaran */}
               <div className="mt-5">
                 <h3 className="text-sm font-semibold text-gray-800">Metode Pembayaran:</h3>
                 <div className="flex items-center gap-2 text-sm text-gray-700 mt-1">
@@ -114,21 +133,15 @@ export default function ProductDetail() {
                 </p>
               </div>
 
-              {/* Tombol Aksi */}
               <div className="mt-5 flex flex-col sm:flex-row gap-3">
                 <button
-                  onClick={() => navigate(`/checkout/${id}`)}
+                  onClick={() => navigate(`/checkout/${product.id}`)}
                   className="flex items-center justify-center gap-2 border border-[var(--color-green)] text-[var(--color-green-dark)] px-4 py-2 rounded-full text-sm font-semibold hover:bg-[var(--color-green)] hover:text-white transition-all"
                 >
                   <FiShoppingCart className="w-4 h-4" />
                   Checkout
                 </button>
 
-                <button className="bg-[var(--color-green-dark)] text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-[var(--color-green)] transition-all">
-                  Beli dengan Voucher
-                  <br />
-                  <span className="text-xs font-bold block">Rp4.730</span>
-                </button>
               </div>
             </div>
           </div>

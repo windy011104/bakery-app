@@ -16,9 +16,10 @@ const AuthLayout = React.lazy(() => import('./layouts/AuthLayout.jsx'));
 const Register = React.lazy(() => import('./pages/auth/Register.jsx'));
 const Forgot = React.lazy(() => import('./pages/auth/Forgot.jsx'));
 const Login = React.lazy(() => import('./pages/auth/Login.jsx'));
-const ProductDetail = React.lazy(() => import("./pages/ProductDetail"))
-const TestimonialDetail = React.lazy(() => import("./components/TestimonialsDetail"))
-const Checkout = React.lazy(() => import("./pages/Checkout"))
+const ProductDetail = React.lazy(() => import("./pages/ProductDetail"));
+const TestimonialDetail = React.lazy(() => import("./components/TestimonialsDetail"));
+const Checkout = React.lazy(() => import("./pages/Checkout"));
+const OrderSuccess = React.lazy(() => import("./pages/OrderSuccess"));
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
                 <Route path="/products" element={<Products />} />
                 <Route path="/product/:id" element={<ProductDetail />} />
                 <Route path="/checkout/:id" element={<Checkout />} /> 
+                <Route path="/sukses" element={<OrderSuccess />} />
                 <Route path="/special-orders" element={<SpesialOrders />} />
                 <Route path="/contact" element={<Contact />} />
               </Route>

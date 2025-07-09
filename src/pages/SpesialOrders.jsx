@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; 
 import PageHeader from '../components/PageHeader';
 import Loading from '../components/Loading';
 import ErrorMessage from '../components/ErrorMessage';
 
 export default function SpecialOrders() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     nama_lengkap: '',
     nomor_telepon: '',
@@ -26,8 +28,8 @@ export default function SpecialOrders() {
       const response = await fetch('https://dhfcykarscpafidcmuwm.supabase.co/rest/v1/pelanggan_loyal', {
         method: 'POST',
         headers: {
-          apikey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...',
-          Authorization: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...',
+          apikey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRoZmN5a2Fyc2NwYWZpZGNtdXdtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk5NDQ4ODksImV4cCI6MjA2NTUyMDg4OX0.nd_gvyNavdaiwgn3PbXCzhMAPOy149Xll6MaCoymyDY',
+          Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRoZmN5a2Fyc2NwYWZpZGNtdXdtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk5NDQ4ODksImV4cCI6MjA2NTUyMDg4OX0.nd_gvyNavdaiwgn3PbXCzhMAPOy149Xll6MaCoymyDY',
           'Content-Type': 'application/json',
           Prefer: 'return=representation',
         },
@@ -47,6 +49,7 @@ export default function SpecialOrders() {
         metode_pengiriman: '',
         detail_pesanan: '',
       });
+      navigate('/sukses'); 
     } catch (err) {
       setError(err.message || 'Terjadi kesalahan saat mengirim data.');
     } finally {
@@ -131,7 +134,7 @@ export default function SpecialOrders() {
           </form>
 
           {/* 4 Google Maps */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4 font-poppins">
             {[
               {
                 title: 'Outlet Gobah',
